@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Bar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="menu">
+        <h2>Vår Drinkmeny</h2>
+        <div class="drinks-grid">
+            <!-- Drink Cards -->
+            <div class="drink-card" onclick="showMenu('Tutti Frutti', 23)">
+                <h3>Tutti Frutti</h3>
+                <p>Pris: 23 kr</p>
+                <button class="red-button" onclick="showMenu('Tutti Frutti', 23); event.stopPropagation();">Välj variant</button>
+            </div>
+            <div class="drink-card" onclick="showMenu('Sour Apple', 23)">
+                <h3>Sour Apple</h3>
+                <p>Pris: 23 kr</p>
+                <button class="red-button" onclick="showMenu('Sour Apple', 23); event.stopPropagation();">Välj variant</button>
+            </div>
+            <div class="drink-card" onclick="showMenu('Soda Pop', 25)">
+                <h3>Soda Pop</h3>
+                <p>Pris: 25 kr</p>
+                <button class="red-button" onclick="showMenu('Soda Pop', 25); event.stopPropagation();">Välj variant</button>
+            </div>
+            <div class="drink-card" onclick="showMenu('Electric Soda Pop', 30)">
+                <h3>Electric Soda Pop</h3>
+                <p>Pris: 30 kr</p>
+                <button class="red-button" onclick="showMenu('Electric Soda Pop', 30); event.stopPropagation();">Välj variant</button>
+            </div>
+            <div class="drink-card" onclick="showMenu('Candy', 20)">
+                <h3>Candy</h3>
+                <p>Pris: 20 kr</p>
+                <button class="red-button" onclick="showMenu('Candy', 20); event.stopPropagation();">Välj variant</button>
+            </div>
+            <div class="drink-card" onclick="showMenu('Pineapple', 22)">
+                <h3>Pineapple</h3>
+                <p>Pris: 22 kr</p>
+                <button class="red-button" onclick="showMenu('Pineapple', 22); event.stopPropagation();">Välj variant</button>
+            </div>
+            <div class="drink-card" onclick="showMenu('Sour Raspberry', 23)">
+                <h3>Sour Raspberry</h3>
+                <p>Pris: 23 kr</p>
+                <button class="red-button" onclick="showMenu('Sour Raspberry', 23); event.stopPropagation();">Välj variant</button>
+            </div>
+            <div class="drink-card" onclick="showMenu('Bubblegum Pineapple', 25)">
+                <h3>Bubblegum Pineapple</h3>
+                <p>Pris: 25 kr</p>
+                <button class="red-button" onclick="showMenu('Bubblegum Pineapple', 25); event.stopPropagation();">Välj variant</button>
+            </div>
+            <div class="drink-card" onclick="showMenu('Sour Raspberry Pineapple', 24)">
+                <h3>Sour Raspberry Pineapple</h3>
+                <p>Pris: 24 kr</p>
+                <button class="red-button" onclick="showMenu('Sour Raspberry Pineapple', 24); event.stopPropagation();">Välj variant</button>
+            </div>
+            <div class="drink-card" onclick="showMenu('Vattenmelon', 25)">
+                <h3>Vattenmelon</h3>
+                <p>Pris: 25 kr</p>
+                <button class="red-button" onclick="showMenu('Vattenmelon', 25); event.stopPropagation();">Välj variant</button>
+            </div>
+            <div class="drink-card" onclick="showMenu('Pepsi', 12)">
+                <h3>Pepsi</h3>
+                <p>Pris: 12 kr</p>
+                <button class="red-button" onclick="showMenu('Pepsi', 12); event.stopPropagation();">Välj variant</button>
+            </div>
+            <div class="drink-card" onclick="showMenu('Pepsi Max', 12)">
+                <h3>Pepsi Max</h3>
+                <p>Pris: 12 kr</p>
+                <button class="red-button" onclick="showMenu('Pepsi Max', 12); event.stopPropagation();">Välj variant</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meny för val av variant -->
+    <div id="variant-menu" class="menu-modal">
+        <div class="menu-modal-content">
+            <span class="close-button" onclick="closeMenu()">&times;</span>
+            <h3 id="menu-drink-name">Drinknamn</h3>
+            <p>Välj variant:</p>
+            <button class="red-button" onclick="selectVariant('söt')">Söt</button>
+            <button class="red-button" onclick="selectVariant('sur')">Sur (+3 kr)</button>
+            <p id="final-price">Pris: 0 kr</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
